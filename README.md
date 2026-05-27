@@ -1,1 +1,1 @@
-https://lyauwroom.github.io/ps-LR-Web_v2/
+ps-LR-Web_v2
