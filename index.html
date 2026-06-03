@@ -3,57 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LINE | Website Build v2</title>
+<title>LINE | Modern Layout Build</title>
 <style>
-  body { margin: 0; font-family: Arial, sans-serif; font-size:16px (Base); font-weight:400 (Normal); color:#111111; background-color:#FFFFFF; width:1; height:Auto;  }
-  .section-block { box-sizing: border-box; display: flex; flex-direction: column; }
-  .btn-group { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
-  .missing-img { border: 2px dashed red; padding: 20px; display: inline-block; background: #fff5f5; color: red; font-size: 12px; margin: 10px 0; }
-  .missing-link { color: red; font-weight: bold; text-decoration: underline; margin-right: 15px; }
+  body { margin: 0; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size:16px (Base); font-weight:400 (Normal); color:#111111; background-color:#FFFFFF; width:1; height:Auto;  color: #333; line-height: 1.6; }
+  .section-block { box-sizing: border-box; width: 100%; padding: 60px 10%; display: flex; flex-wrap: wrap; }
+  .layout-space-between { justify-content: space-between; align-items: center; }
+  .layout-split { justify-content: space-between; align-items: center; gap: 5%; }
+  .layout-center { flex-direction: column; align-items: center; text-align: center; justify-content: center; }
+  .content-box-left { flex: 1; min-width: 300px; }
+  .media-box-right { flex: 1; min-width: 300px; display: flex; justify-content: center; }
+  .btn-group { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+  .styled-btn { display: inline-block; padding: 12px 24px; background: #06C755; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 14px; transition: background 0.2s; }
+  .styled-btn:hover { background: #05b34c; }
+  .missing-media-placeholder { border: 2px dashed #999; background: #fcfcfc; width: 100%; min-height: 250px; display: flex; justify-content: center; align-items: center; color: #777; border-radius: 8px; font-weight: 500; }
+  h2 { font-size: 32px; margin-bottom: 16px; color: #111; }
+  p { font-size: 16px; color: #565656; }
 </style>
 </head>
 <body>
-  <header class="section-block" style="font-size:14px; font-weight:700 (Bold); color:#111111; background-color:#FFFFFF; width:1; height:80px; padding:0 20px; ">
-    <h2>LINE Logo</h2>
-    <div class="missing-img">[图/影片位置] 缺失的图片与链接：来自于区块 Header</div>
+  <header class="section-block layout-space-between" style="font-size:14px; font-weight:700 (Bold); color:#111111; background-color:#FFFFFF; width:1; height:80px; padding:0 20px; background-color: #FFFFFF; ">
+    <div style="font-weight: bold; font-size: 20px;">LINE Logo</div>
     <div class="btn-group">
-      <a href="#" class="missing-link">[缺失链接]: Messenger APP</a>
-      <a href="#" class="missing-link">[缺失链接]: Services</a>
-      <a href="#" class="missing-link">[缺失链接]: EN (Language Selector)</a>
+      <a href="#" class="styled-btn">Messenger APP</a>
+      <a href="#" class="styled-btn">Services</a>
+      <a href="#" class="styled-btn">EN (Language Selector)</a>
     </div>
   </header>
 
-  <section class="section-block" style="color:#FFFFFF; background-color:Transparent; width:1; height:100vh; ">
+  <section class="section-block layout-center" style="color:#FFFFFF; background-color:Transparent; width:1; height:100vh; ">
     <h2>Life on LINE</h2>
-    <p>LINE—always at your side.</p>
-    <div class="missing-img">[图/影片位置] 缺失的图片与链接：来自于区块 Hero Section</div>
+    <p style="max-width: 600px; margin: 0 auto;">LINE—always at your side.</p>
+    <div class="missing-media-placeholder" style="max-width:600px; margin: 20px 0;">📷 [缺失图片占位]</div>
     <div class="btn-group">
-      <a href="#" class="missing-link">[缺失链接]: App Store</a>
-      <a href="#" class="missing-link">[缺失链接]: Google Play</a>
-      <a href="#" class="missing-link">[缺失链接]: Windows Store</a>
-      <a href="#" class="missing-link">[缺失链接]: Chrome</a>
-      <a href="#" class="missing-link">[缺失链接]: APK</a>
+      <a href="#" class="styled-btn">App Store</a>
+      <a href="#" class="styled-btn">Google Play</a>
+      <a href="#" class="styled-btn">Windows Store</a>
+      <a href="#" class="styled-btn">Chrome</a>
+      <a href="#" class="styled-btn">APK</a>
     </div>
   </section>
 
-  <section class="section-block" style="font-size:18px; font-weight:400; color:#111111; background-color:#FFFFFF; width:1; height:Auto; padding:80px 20px; ">
-    <h2>Life on LINE</h2>
-    <p>More than just a messenger app. LINE is new level of communication, and the very infrastructure of your life.</p>
-    <div class="missing-img">[图/影片位置] 缺失的图片与链接：来自于区块 About Section</div>
+  <section class="section-block layout-split" style="font-size:18px; font-weight:400; color:#111111; background-color:#FFFFFF; width:1; height:Auto; padding:80px 20px; background-color: #FFFFFF; ">
+    <div class="content-box-left">
+      <h2>Life on LINE</h2>
+      <p>More than just a messenger app. LINE is new level of communication, and the very infrastructure of your life.</p>
+    </div>
+    <div class="media-box-right">
+      <div class="missing-media-placeholder">📷 [缺失图片占位] 区块：About Section</div>
+    </div>
   </section>
 
-  <section class="section-block" style="font-size:18px; font-weight:400; color:#111111; background-color:#FAFAFA; width:1; height:Auto; padding:80px 20px; ">
-    <h2>Messenger APP</h2>
-    <p>New communication app which allows you to make FREE voice calls and send FREE messages whenever and wherever you are, 24 hours a day!</p>
-    <div class="missing-img">[图/影片位置] 缺失的图片与链接：来自于区块 Messenger App</div>
+  <section class="section-block layout-split" style="font-size:18px; font-weight:400; color:#111111; background-color:#FAFAFA; width:1; height:Auto; padding:80px 20px; background-color: #FAFAFA; ">
+    <div class="content-box-left">
+      <h2>Messenger APP</h2>
+      <p>New communication app which allows you to make FREE voice calls and send FREE messages whenever and wherever you are, 24 hours a day!</p>
+    </div>
+    <div class="media-box-right">
+      <div class="missing-media-placeholder">📷 [缺失图片占位] 区块：Messenger App</div>
+    </div>
   </section>
 
-  <footer class="section-block" style="font-size:12px; font-weight:400; color:#777777; background-color:#FFFFFF; width:1; height:Auto; padding:40px 20px; ">
-    <p>©️ LY Corporation</p>
+  <footer class="section-block layout-center" style="font-size:12px; font-weight:400; color:#777777; background-color:#FFFFFF; width:1; height:Auto; padding:40px 20px; background-color: #FFFFFF; ">
+    <p style="max-width: 600px; margin: 0 auto;">©️ LY Corporation</p>
     <div class="btn-group">
-      <a href="#" class="missing-link">[缺失链接]: Help</a>
-      <a href="#" class="missing-link">[缺失链接]: User Agreement</a>
-      <a href="#" class="missing-link">[缺失链接]: Privacy Policy</a>
+      <a href="#" class="styled-btn">Help</a>
+      <a href="#" class="styled-btn">User Agreement</a>
+      <a href="#" class="styled-btn">Privacy Policy</a>
     </div>
   </footer>
 
